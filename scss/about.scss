@@ -1,0 +1,181 @@
+.about {
+  height: 100vh;
+  h2 {
+    text-align: center;
+    opacity: 0;
+    margin: 25px 0 35px 0;
+    font-weight: bold;
+    color: #444444;
+  }
+  hr{
+    width: 4%;
+    opacity: 0;
+    border: 2px solid #444444;
+  }
+}
+
+/* text slide animation*/
+.slide-fade {
+  h2 {
+    opacity: 0;
+    animation: dynamicSlide 1s 0.5s forwards;
+  }
+  hr {
+    opacity: 0;
+    animation: dynamicSlide 2s 0.5s forwards;
+  }
+}
+
+
+@keyframes dynamicSlide {
+  from {opacity: 0;
+        transform: translateX(-300px)}
+  to {opacity: 1;
+        transform: translateX(0)}
+}
+
+
+.about-navigation {
+  height: 50px;
+  width: 100%;
+  background-color: #444;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid #ffc107;
+}
+.about-navigation_list {
+  display: flex;
+  list-style: none;
+  li{
+    margin: 0 55px 0 55px;
+    font-size: 20px;
+    color: white;
+    &:hover{
+      color:#ffc107;
+      cursor: pointer;
+    }
+  }
+}
+
+.about-navigation_list {
+  .active {
+    animation: slowChange 0.5s 0s forwards;
+    text-decoration: underline;
+  }
+}
+@keyframes slowChange {
+  0%{color:white;
+  transform: rotate(180deg) scale(0)}
+  50% {color: #ffc107;
+    transform: rotate(0deg) scale(1.5)}
+  100% {color: #ffc107;
+  transform: scale(1)}
+}
+.about-me_container {
+  display: flex;
+  margin-top: 80px;
+}
+
+.about-photo {
+  height: 300px;
+  width: 30%;
+  min-height: 400px;
+  background-color: red;
+}
+
+.skills-navigation {
+  width: 70%;
+  min-width: 600px;
+  height: 300px;
+  display: flex;
+}
+.skills-box{
+  width: 25%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .flex-bottom{
+    margin-top: 5px;
+  }
+}
+
+.first-skill {
+  opacity: 0;
+  animation: turning 2s 0.2s forwards;
+  .skill-description {
+    animation: dynamicSlide 1s 0.2s forwards;
+  }
+}
+.second-skill{
+  opacity: 0;
+  animation: turning 2s 0.4s forwards;
+  .skill-description {
+    animation: dynamicSlide 1s 0.4s forwards;
+    margin-bottom: 10px;
+  }
+}
+.third-skill{
+  opacity: 0;
+  animation: turning 2s 0.6s forwards;
+  .skill-description {
+    animation: dynamicSlide 1s 0.6s forwards;
+  }
+}
+.fourth-skill{
+  opacity: 0;
+  animation: turning 2s 0.8s forwards;
+  .skill-description {
+    animation: dynamicSlide 1s 0.8s forwards;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes turning {
+  from {opacity: 0;
+    transform: rotateY(90deg)}
+  to {transform: rotateY(0);
+        opacity: 1}
+}
+
+.skill-description{
+   margin-top: 20px;
+   text-align: center;
+}
+.skills-element {
+  width: 85px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffc107;
+  position: relative;
+  &:before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: inherit;
+    height: 100%;
+    background: #ffc107;
+    transform: rotate(60deg);
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: inherit;
+    height: 100%;
+    background: #ffc107;
+    transform: rotate(-60deg);
+  }
+  i{
+    font-size: 60px;
+    position: absolute;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,27 @@
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.flex-container {
+  display: flex;
+}
+.fixed-nav{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  z-index: 10;
+  animation: showNav 1s 0s forwards;
+}
+@keyframes showNav  {
+  0% {transform: translateY(-100px);
+      opacity: 0}
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@import "entryPage";
+@import "about";
+@import "projects";
+@import "contact";
+@import "footer";

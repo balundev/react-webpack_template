@@ -1,0 +1,206 @@
+.projects-section {
+  height: 120vh;
+  background-color: #f2f2f2;
+  .section-template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      h2 {
+        text-align: center;
+        margin: 25px 0 35px 0;
+        font-weight: bold;
+        color: #444444;
+      }
+      hr{
+        width: 45%;
+        border: 2px solid #444444;
+    }
+
+  }
+
+}
+.project-technologies {
+  button {
+    width: 100px;
+    margin: 0 5px 0 5px;
+    border: 1px solid #ffc107;
+    transition: 1s;
+  }
+  .active {
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+  }
+}
+
+.projects-box {
+  margin-top: 25px;
+  width: 95%;
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects-box_all0 {
+  animation: rotate 1s 0.25s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all1 {
+  animation: rotate 1s 0.5s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all2 {
+  animation: rotate 1s 0.75s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all3 {
+  animation: rotate 1s 1s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all4 {
+  animation: rotate 1s 1.25s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all5 {
+  animation: rotate 1s 1.5s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+.projects-box_all6 {
+  animation: rotate 1s 1.75s forwards linear;
+  width: 32%;
+  height: 45%;
+  opacity: 0;
+}
+
+@keyframes rotate {
+  0% {opacity: 0;
+    transform: rotateY(90deg)}
+  100% {transform: rotateY(0);
+    opacity: 1}
+}
+
+.projects-box_react0 {
+  width: 32%;
+  animation: slideNorth 0.3s 0.3s forwards;
+  opacity: 0;
+  height: 45%;
+
+}
+.projects-box_react1 {
+  width: 32%;
+  animation: slideNorth 0.3s 0.6s forwards;
+  opacity: 0;
+  height: 45%;
+}
+.projects-box_react2 {
+  width: 32%;
+  animation: slideNorth 0.3s 0.9s forwards;
+  opacity: 0;
+  height: 45%;
+}
+
+@keyframes slideNorth {
+  0% {transform: translateY(300px);
+      opacity: 0}
+  100% {transform: translateY(0);
+      opacity: 1}
+
+}
+
+
+.projects-box_node0 {
+  width: 45%;
+  opacity: 0;
+  height: 60%;
+  animation: slideLeft 0.3s 0.5s forwards;
+}
+.projects-box_node1 {
+  width: 45%;
+  opacity: 0;
+  height: 100%;
+  animation: slideRight 0.3s 0.5s forwards;
+}
+
+@keyframes slideRight {
+  0% {transform: translateX(200px);
+      opacity: 0}
+  100% {transform: translateX(0);
+  opacity: 1}
+}
+@keyframes slideLeft {
+  0% {transform: translateX(-200px);
+    opacity: 0}
+  100% {transform: translateX(0);
+  opacity: 1}
+}
+
+@mixin image {
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+}
+.react1 {
+  background-image: url("../images/reactFilms.png");
+  @include image
+}
+.react2 {
+  background-image: url("../images/reactWeather.png");
+  @include image
+}
+.reactNode {
+  background-image: url("../images/smartbrain.png");
+  @include image
+}
+.node {
+  background-image: url("../images/bestCat.png");
+  @include image
+}
+.javaScript {
+  background-image: url("../images/furyGame.png");
+  @include image
+}
+.sitOnChair {
+  background-image: url("../images/htmlcssjs.png");
+  @include image
+}
+.project-description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 3s;
+  opacity: 0;
+  background-color: #f2f2f2;
+  animation: background 0.4s 0.1s forwards linear;
+  h4 {
+    font-weight: bold;
+  }
+  p {
+    color: #ffc107;
+  }
+  button {
+    margin-top: 50px;
+  }
+}
+
+@keyframes background {
+  0% {transform: translate(-300px,-300px);
+  opacity: 0}
+  100% {transform: translate(0,0);
+  opacity: 1}
+
+}
