@@ -11,13 +11,11 @@ class EntryPage extends React.Component {
     render() {
         return (
             <div onMouseOver={this.handleNavigation} className="entry-page">
-                <div className="stars"></div>
-                <div className="twinkling"></div>
                 <EntryPageName/>
                 <EntryPageButton navigationChange={this.props.navigationChange} scrollTo={this.props.scrollTo}/>
             </div>
         );
     }
-};
+}
 
 export default EntryPage

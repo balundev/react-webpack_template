@@ -127,13 +127,13 @@ class Projects extends React.Component {
                 <div className="section-template">
                     <Title title={this.props.title}/>
                     <div className="project-technologies">
-                        <button className={this.state.buttonActive === "1" ? 'active' : null}
+                        <button className={`btn btn-outline-info + " " + ${this.state.buttonActive === "1" ? 'active' : null}`}
                                 onClick={this.handleAllClick}>All
                         </button>
-                        <button className={this.state.buttonActive === "2" ? 'active' : null}
+                        <button className={`btn btn-outline-info + " " + ${this.state.buttonActive === "2" ? 'active' : null}`}
                                 onClick={this.handleReactClick}>ReactJS
                         </button>
-                        <button className={this.state.buttonActive === "3" ? 'active' : null}
+                        <button className={`btn btn-outline-info + " " + ${this.state.buttonActive === "3" ? 'active' : null}`}
                                 onClick={this.handleNodeClick}>NodeJS
                         </button>
                     </div>

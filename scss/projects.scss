@@ -1,4 +1,5 @@
 .projects-section {
+  padding-top: 50px;
   height: 120vh;
   background-color: #f2f2f2;
   .section-template {
@@ -6,6 +7,7 @@
     flex-direction: column;
     align-items: center;
       h2 {
+        font-family: 'Fredoka One', cursive;
         text-align: center;
         margin: 25px 0 35px 0;
         font-weight: bold;
@@ -21,14 +23,11 @@
 }
 .project-technologies {
   button {
-    width: 100px;
-    margin: 0 5px 0 5px;
-    border: 1px solid #ffc107;
     transition: 1s;
   }
   .active {
-    background-color: #ffc107;
-    border: 1px solid #ffc107;
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
   }
 }
 
@@ -190,7 +189,7 @@
     font-weight: bold;
   }
   p {
-    color: #ffc107;
+    color: lightseagreen;
   }
   button {
     margin-top: 50px;

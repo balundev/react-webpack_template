@@ -1,20 +1,7 @@
 import React from "react"
-import AboutNavigation from "./aboutNavigation.jsx";
 import Skills from "./skills.jsx";
 import Title from "../title.jsx";
-import Particles from 'react-particles-js';
 
-const particlesOptions = {
-    particles: {
-        number: {
-            value: 50,
-            density: {
-                enable: true,
-                value_area: 1000
-            }
-        }
-    }
-};
 
 class About extends React.Component {
     state ={
@@ -37,11 +24,15 @@ class About extends React.Component {
     render() {
         return (
             <div onMouseOver={this.handleLoadSection} className="about">
-                <Particles className="particles" params={particlesOptions}/>
-                <AboutNavigation currentNavigation={this.props.currentNavigation} projectsClick={this.props.projectsClick} homeClick={this.props.homeClick} aboutClick={this.props.aboutClick} contactClick={this.props.contactClick}/>
                 <Title slideClass={this.state.activeClasses[4]} title={this.props.title}/>
                 <div className="about-me_container">
-                    <div className="about-photo"></div>
+                    <div className={`about-me_me + " " + ${this.state.activeClasses[0]}`}>
+                        <h3>Who Am I?</h3>
+                        Junior JavaScript developer who loves
+                        <br/>
+                        UI effects and animations
+                        <div className="about-photo"></div>
+                    </div>
                     <Skills activeClasses={this.state.activeClasses}/>
                 </div>
             </div>

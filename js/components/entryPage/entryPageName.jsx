@@ -5,8 +5,7 @@ import Typist from 'react-typist';
 const EntryPageName = () => {
     return (
         <div className="entry-page_name">
-            <h1>Alan</h1>
-            <h1>Danieluk</h1>
+            <h1>Alan Danieluk</h1>
             <hr/>
             <Typist>
                 <span className="entry-page_position" > Junior Frontend Developer </span>

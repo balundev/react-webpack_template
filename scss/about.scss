@@ -1,10 +1,11 @@
 .about {
   height: 100vh;
+  padding-top: 50px;
   h2 {
     text-align: center;
     opacity: 0;
+    font-family: 'Fredoka One', cursive;
     margin: 25px 0 35px 0;
-    font-weight: bold;
     color: #444444;
   }
   hr{
@@ -43,7 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 4px solid #ffc107;
+  border-bottom: 4px solid lightseagreen;
 }
 .about-navigation_list {
   display: flex;
@@ -53,7 +54,7 @@
     font-size: 20px;
     color: white;
     &:hover{
-      color:#ffc107;
+      color:lightseagreen;
       cursor: pointer;
     }
   }
@@ -68,21 +69,31 @@
 @keyframes slowChange {
   0%{color:white;
   transform: rotate(180deg) scale(0)}
-  50% {color: #ffc107;
+  50% {color: lightseagreen;
     transform: rotate(0deg) scale(1.5)}
-  100% {color: #ffc107;
+  100% {color: lightseagreen;
   transform: scale(1)}
 }
 .about-me_container {
   display: flex;
   margin-top: 80px;
 }
-
-.about-photo {
-  height: 300px;
+.about-me_me {
+  height: 400px;
+  opacity: 0;
   width: 30%;
-  min-height: 400px;
-  background-color: red;
+  text-align: center;
+  h3 {
+    color: lightseagreen;
+  }
+}
+.about-photo {
+  height: 350px;
+  width: 100%;
+  background-image: url("../images/me.png");
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .skills-navigation {
@@ -105,14 +116,14 @@
 
 .first-skill {
   opacity: 0;
-  animation: turning 2s 0.2s forwards;
+  animation: turning 1s 0.5s forwards;
   .skill-description {
     animation: dynamicSlide 1s 0.2s forwards;
   }
 }
 .second-skill{
   opacity: 0;
-  animation: turning 2s 0.4s forwards;
+  animation: turning 1s 1s forwards;
   .skill-description {
     animation: dynamicSlide 1s 0.4s forwards;
     margin-bottom: 10px;
@@ -120,14 +131,14 @@
 }
 .third-skill{
   opacity: 0;
-  animation: turning 2s 0.6s forwards;
+  animation: turning 1s 1.5s forwards;
   .skill-description {
     animation: dynamicSlide 1s 0.6s forwards;
   }
 }
 .fourth-skill{
   opacity: 0;
-  animation: turning 2s 0.8s forwards;
+  animation: turning 1s 2s forwards;
   .skill-description {
     animation: dynamicSlide 1s 0.8s forwards;
     margin-bottom: 10px;
@@ -151,7 +162,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffc107;
+  background: lightseagreen;
   position: relative;
   &:before{
     position: absolute;
@@ -160,7 +171,7 @@
     content: "";
     width: inherit;
     height: 100%;
-    background: #ffc107;
+    background: lightseagreen;
     transform: rotate(60deg);
   }
   &:after {
@@ -170,7 +181,7 @@
     content: "";
     width: inherit;
     height: 100%;
-    background: #ffc107;
+    background: lightseagreen;
     transform: rotate(-60deg);
   }
   i{

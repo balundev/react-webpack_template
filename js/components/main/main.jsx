@@ -4,6 +4,7 @@ import About from "../about/about.jsx";
 import Projects from "../projects/projects.jsx";
 import Contact from "../contact/contact.jsx";
 import Footer from "../footer/footer.jsx";
+import Navigation from "../navigation/Navigation.jsx";
 
 
 class Main extends React.Component {
@@ -37,43 +38,26 @@ class Main extends React.Component {
             navigationChange: number.toString()
         })
     };
-    handleNavigationPosition = () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > this.state.navOffset) {
-            nav.classList.add('fixed-nav');
-        } else {
-            nav.classList.remove('fixed-nav');
-        }
-    };
+
 
     render() {
         return (
 
             <div id="page">
-                <EntryPage navigationChange={this.handleNavigationChange}
+                <EntryPage screenHeight={this.state.navOffset} navigationChange={this.handleNavigationChange}
                            currentNavigation={this.state.navigationChange} scrollTo={this.handleAboutPress}/>
+                <Navigation currentNavigation={this.state.navigationChange} projectsClick={this.handleProjectsPress} homeClick={this.handleHomePress} aboutClick={this.handleAboutPress} contactClick={this.handleContactPress}/>
                 <About navigationChange={this.handleNavigationChange} currentNavigation={this.state.navigationChange}
                        title={this.state.titles[0]} projectsClick={this.handleProjectsPress}
                        homeClick={this.handleHomePress} aboutClick={this.handleAboutPress} contactClick={this.handleContactPress}/>
                 <Projects navigationChange={this.handleNavigationChange} currentNavigation={this.state.navigationChange}
                           title={this.state.titles[1]}/>
-                <Contact title={this.state.titles[2]}/>
+                <Contact navigationChange={this.handleNavigationChange} title={this.state.titles[2]}/>
                 <Footer/>
             </div>
         )
     }
-    componentDidMount() {
-        const nav = document.querySelector('nav');
-        const navTop = nav.offsetTop;
-        this.setState({
-            navOffset: navTop
-        });
-        window.addEventListener('scroll', this.handleNavigationPosition);
-    }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleNavigationPosition);
-    }
 }
 
 export default Main

@@ -1,6 +1,6 @@
 import React from "react"
 
-class AboutNavigation extends React.Component{
+class Navigation extends React.Component{
     state = {
         active: "2"
     };
@@ -9,6 +9,14 @@ class AboutNavigation extends React.Component{
         this.setState({
             active: index
         })
+    };
+    handleNavigationPosition = () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > this.state.navOffset) {
+            nav.classList.add('fixed-nav');
+        } else {
+            nav.classList.remove('fixed-nav');
+        }
     };
 
     render() {
@@ -40,6 +48,18 @@ class AboutNavigation extends React.Component{
             active: nextProps.currentNavigation
         })
     }
+    componentDidMount() {
+        const nav = document.querySelector('nav');
+        const navTop = nav.offsetTop;
+        this.setState({
+            navOffset: navTop
+        });
+        window.addEventListener('scroll', this.handleNavigationPosition);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleNavigationPosition);
+    }
 }
 
-export default AboutNavigation
+export default Navigation
