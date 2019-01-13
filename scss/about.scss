@@ -1,15 +1,18 @@
 .about {
-  min-height: 100vh;
-  padding-top: 50px;
+  min-height: 90vh;
+  padding-top: 20px;
   h2 {
     text-align: center;
+    height: 25px;
     opacity: 0;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     margin: 25px 0 35px 0;
     color: #444444;
   }
   hr{
-    width: 4%;
+    width: 3%;
     opacity: 0;
     border: 2px solid #444444;
   }
@@ -38,12 +41,16 @@
 
 .about-navigation {
   height: 50px;
+  padding-top: 9px;
   width: 100%;
-  background-color: #444;
+  background-color: #444444;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 4px solid lightseagreen;
+}
+.about-navigation2 {
+  display: none;
 }
 .about-navigation_list {
   width: 60%;
@@ -52,6 +59,8 @@
   list-style: none;
   li{
     font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: white;
     &:hover{
       color:lightseagreen;
@@ -102,6 +111,12 @@
   min-width: 600px;
   min-height: 400px;
   display: flex;
+  .skills-box:nth-child(2){
+    flex-direction: column-reverse;
+  }
+  .skills-box:nth-child(4){
+    flex-direction: column-reverse;
+  }
 }
 .skills-box{
   width: 25%;
@@ -196,23 +211,40 @@
     z-index: 2;
   }
 }
-@media (max-width: 1230px) {
+@media (max-width: 1345px) {
+  .about-me_me {
+    margin-bottom: 50px;
+  }
   .about-me_container {
     flex-direction: column;
     align-items: center;
   }
   .skills-navigation {
     width: 100%;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    .skills-box:nth-child(2){
+      flex-direction: column;
+    }
+    .skills-box:nth-child(4){
+      flex-direction: column;
+    }
   }
 }
 
-@media (max-width: 820px) {
-    .skills-box {
-      width: 50%;
+@media (max-width: 970px) {
+  .skills-navigation {
+    .skills-box:nth-child(2){
+      flex-direction: column;
     }
+    .skills-box:nth-child(4){
+      flex-direction: column;
+    }
+  }
+  .skills-box {
+    width: 50%;
+  }
 }
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .skills-box {
     width: 100%;
   }

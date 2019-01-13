@@ -13,26 +13,39 @@ class Main extends React.Component {
         navigationChange: "2",
         navOffset: 1
     };
+
+    handleScrolling = (classname,on)=>{
+        const nav = document.querySelector('nav');
+        const getClass = document.getElementsByClassName(classname);
+        if(on) {
+            nav.classList.add('about-navigation2');
+            setTimeout(() => {
+                nav.classList.remove('about-navigation2');
+            }, 1500);
+        }
+        getClass[0].scrollIntoView({behavior: "smooth", block: "start"});
+    };
+
     handleAboutPress = () => {
-        const about = document.getElementsByClassName("about");
-        about[0].scrollIntoView({behavior: "smooth"});
+        this.handleScrolling("about",false);
         this.setState({
             navigationChange: "2"
         })
 
     };
+
     handleHomePress = () => {
-        const entryPage = document.getElementsByClassName("entry-page");
-        entryPage[0].scrollIntoView({behavior: "smooth"})
+        this.handleScrolling("entry-page",true);
     };
+
     handleProjectsPress = () => {
-        const entryPage = document.getElementsByClassName("projects-section");
-        entryPage[0].scrollIntoView({behavior: "smooth"})
+        this.handleScrolling("projects-section",true);
     };
+
     handleContactPress = () => {
-        const entryPage = document.getElementsByClassName("contact-section");
-        entryPage[0].scrollIntoView({behavior: "smooth"})
+        this.handleScrolling("contact-section",true);
     };
+
     handleNavigationChange = (number) => {
         this.setState({
             navigationChange: number.toString()

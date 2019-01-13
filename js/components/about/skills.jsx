@@ -13,12 +13,12 @@ const Skills = (props) => {
                 </div>
             </div>
             <div className={`skills-box ${props.activeClasses[1]}`}>
-                <div className="skill-description">
-                    <h3>Intuitive</h3>
-                    Easy to use, intuitive UI, inspired from senior designers & developers
-                </div>
                 <div className="skills-element">
                     <i className="far fa-lightbulb"></i>
+                </div>
+                <div className="skill-description">
+                    <h3>Intuitive</h3>
+                    Easy to use, intuitive UI, inspired from senior designers & developers.
                 </div>
             </div>
             <div className={`skills-box ${props.activeClasses[2]}`}>
@@ -31,12 +31,12 @@ const Skills = (props) => {
                 </div>
             </div>
             <div className={`skills-box ${props.activeClasses[3]}`}>
-                <div className="skill-description">
-                    <h3>Modern</h3>
-                    To create my applications I'm using modern development stack
-                </div>
                 <div className="skills-element flex-bottom">
                     <i className="fab fa-react"></i>
+                </div>
+                <div className="skill-description">
+                    <h3>Modern</h3>
+                    To create my applications I'm using modern development stack.
                 </div>
             </div>
         </div>

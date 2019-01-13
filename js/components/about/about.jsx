@@ -30,7 +30,7 @@ class About extends React.Component {
                         <h3>Who Am I?</h3>
                         Junior JavaScript developer who loves
                         <br/>
-                        UI effects and animations
+                        UI effects and animations.
                         <div className="about-photo"></div>
                     </div>
                     <Skills activeClasses={this.state.activeClasses}/>

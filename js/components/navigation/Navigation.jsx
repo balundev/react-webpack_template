@@ -12,7 +12,7 @@ class Navigation extends React.Component{
     };
     handleNavigationPosition = () => {
         const nav = document.querySelector('nav');
-        if (window.scrollY > this.state.navOffset) {
+        if (window.scrollY > this.state.navOffset+100) {
             nav.classList.add('fixed-nav');
         } else {
             nav.classList.remove('fixed-nav');
