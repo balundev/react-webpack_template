@@ -1,8 +1,10 @@
 .projects-section {
   padding-top: 50px;
-  height: 120vh;
+  min-height: 100vh;
+  padding-bottom: 20vh;
   background-color: #f2f2f2;
   .section-template {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +36,7 @@
 .projects-box {
   margin-top: 25px;
   width: 95%;
-  height: 75vh;
+  min-height: 75vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -42,44 +44,51 @@
 
 .projects-box_all0 {
   animation: rotate 1s 0.25s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all1 {
   animation: rotate 1s 0.5s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all2 {
   animation: rotate 1s 0.75s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all3 {
   animation: rotate 1s 1s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all4 {
   animation: rotate 1s 1.25s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all5 {
   animation: rotate 1s 1.5s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 .projects-box_all6 {
   animation: rotate 1s 1.75s forwards linear;
+  margin-bottom: 10px;
   width: 32%;
-  height: 45%;
+  height: 255px;
   opacity: 0;
 }
 
@@ -94,20 +103,20 @@
   width: 32%;
   animation: slideNorth 0.3s 0.3s forwards;
   opacity: 0;
-  height: 45%;
+  height: 255px;
 
 }
 .projects-box_react1 {
   width: 32%;
   animation: slideNorth 0.3s 0.6s forwards;
   opacity: 0;
-  height: 45%;
+  height: 255px;
 }
 .projects-box_react2 {
   width: 32%;
   animation: slideNorth 0.3s 0.9s forwards;
   opacity: 0;
-  height: 45%;
+  height: 255px;
 }
 
 @keyframes slideNorth {
@@ -122,13 +131,13 @@
 .projects-box_node0 {
   width: 45%;
   opacity: 0;
-  height: 60%;
+  height: 300px;
   animation: slideLeft 0.3s 0.5s forwards;
 }
 .projects-box_node1 {
   width: 45%;
   opacity: 0;
-  height: 100%;
+  height: 500px;
   animation: slideRight 0.3s 0.5s forwards;
 }
 
@@ -201,5 +210,142 @@
   opacity: 0}
   100% {transform: translate(0,0);
   opacity: 1}
+}
 
+
+@media (max-width: 1400px) {
+  .projects-box_all0 {
+    width: 45%;
+  }
+  .projects-box_all1 {
+    width: 45%;
+  }
+  .projects-box_all2 {
+    width: 45%;
+  }
+  .projects-box_all3 {
+    width: 45%;
+  }
+  .projects-box_all4 {
+    width: 45%;
+  }
+  .projects-box_all5 {
+    width: 45%;
+  }
+  .projects-box_all6 {
+    width: 45%;
+  }
+  .projects-box_node0 {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  .projects-box_node1 {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1175px){
+  .projects-box_react0 {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .projects-box_react1 {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .projects-box_react2 {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .projects-box_node0 {
+    height: 200px;
+  }
+  .projects-box_node1 {
+    height: 200px;
+  }
+}
+@media (max-width: 920px){
+  .projects-box_all0 {
+    width: 80%;
+  }
+  .projects-box_all1 {
+    width: 80%;
+  }
+  .projects-box_all2 {
+    width: 80%;
+  }
+  .projects-box_all3 {
+    width: 80%;
+  }
+  .projects-box_all4 {
+    width: 80%;
+  }
+  .projects-box_all5 {
+    width: 80%;
+  }
+  .projects-box_all6 {
+    width: 80%;
+  }
+  .projects-box_react0 {
+    width: 100%;
+  }
+  .projects-box_react1 {
+    width: 100%;
+  }
+  .projects-box_react2 {
+    width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .projects-box_all0 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all1 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all2 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all3 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all4 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all5 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_all6 {
+    width: 100%;
+    height: 150px;
+  }
+  .projects-box_react0 {
+    height: 150px;
+    width: 80%;
+  }
+  .projects-box_react1 {
+    height: 150px;
+    width: 80%;
+  }
+  .projects-box_react2 {
+    height: 150px;
+    width: 80%;
+  }
+  .projects-box_node0 {
+    height: 220px;
+    width: 100%;
+  }
+  .projects-box_node1 {
+    height: 220px;
+    width: 100%;
+  }
 }

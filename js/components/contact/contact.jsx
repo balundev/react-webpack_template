@@ -34,9 +34,16 @@ class Contact extends React.Component {
             message: e.target.value
         })
     };
+    handleMessageHide = () =>{
+        setTimeout(()=>{
+            this.setState({
+                sentInfo: []
+            })
+        },5000)
+    };
     handleSubmitForm = (e) => {
         e.preventDefault();
-        if (this.state.name.length > 0 && this.state.message.length > 0 && this.state.email.length > 0 && this.state.sent === false) {
+        if (this.state.name.length > 2 && this.state.message.length > 5 && this.state.email.length > 6 && this.state.sent === false) {
             let params = {
                 user_id: 'user_Rm3AXzQZjmGkhaH9fy6gq',
                 service_id: 'gmail',
@@ -66,17 +73,11 @@ class Contact extends React.Component {
                             name: "",
                             email: "",
                             message: "",
-                        })
+                        },this.handleMessageHide)
                     } else {
                         this.setState({
                             sentInfo: ["API response error, try again later","red"]
-                        },()=>{
-                            setTimeout(()=>{
-                                this.setState({
-                                    sentInfo: []
-                                })
-                            },5000)
-                        })
+                        },this.handleMessageHide);
                         return httpResponse.text()
                             .then(text => Promise.reject(text))
                     }
@@ -90,23 +91,11 @@ class Contact extends React.Component {
                 name: "",
                 email: "",
                 message: "",
-            },()=>{
-                setTimeout(()=>{
-                    this.setState({
-                        sentInfo: []
-                    })
-                },5000)
-            })
+            },this.handleMessageHide)
         }else{
             this.setState({
                 sentInfo: ["Please fill all fields correctly", "red"]
-            },()=>{
-                setTimeout(()=>{
-                    this.setState({
-                        sentInfo: []
-                    })
-                },5000)
-            })
+            },this.handleMessageHide)
         }
     }
     ;

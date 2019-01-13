@@ -16,7 +16,7 @@ class Footer extends React.Component {
                     <a href="https://www.instagram.com/d_alanofficial/" target="_blank"><div className="social"><i className="fab fa-instagram"></i></div></a>
                 </div>
                 <div onClick={this.handleMoveTop} className="move-top"><i className="fas fa-angle-double-up"></i></div>
-                <p>&copy; 2018 Alan Danieluk</p>
+                <p>&copy; 2019 Alan Danieluk</p>
             </footer>
         );
     }
